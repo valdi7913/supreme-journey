@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6j0qbrlnngy"]
+
+[ext_resource type="Texture2D" uid="uid://bj8583as8gjmh" path="res://Assets/Sprites/BillDefault_1.png" id="1_ejrk2"]
+[ext_resource type="Texture2D" uid="uid://b64vd1w4d6qsj" path="res://Assets/Sprites/BillDefault_2.png" id="2_2samc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ujnf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ejrk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2samc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="RigidBody2D"]
+
+[node name="AnimationSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3.25, -3)
+scale = Vector2(0.421875, 0.416667)
+sprite_frames = SubResource("SpriteFrames_4ujnf")
+frame_progress = 0.630368
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
