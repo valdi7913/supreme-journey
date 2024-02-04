@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2b0cgmblgo4t"]
+
+[ext_resource type="TileSet" path="./Assets/Sprites/CloudTile.png" id="1_ji10m"]
+
+[node name="Cloud" type="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_ji10m")
+format = 2
