@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bebobeo562c82"]
+[gd_scene load_steps=6 format=3 uid="uid://bebobeo562c82"]
+
+[ext_resource type="Texture2D" uid="uid://c70psdqtenxrd" path="res://Assets/Sprites/CastleBrick.png" id="1_vbwg1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_islry"]
-bounce = 0.35
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w4scl"]
-size = Vector2(1200, 16)
+size = Vector2(1024, 128)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jr5k7"]
+texture = ExtResource("1_vbwg1")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pucnc"]
+sources/0 = SubResource("TileSetAtlasSource_jr5k7")
 
 [node name="RigidBody2D" type="RigidBody2D"]
+texture_filter = 1
 disable_mode = 1
 collision_layer = 129
 physics_material_override = SubResource("PhysicsMaterial_islry")
@@ -14,3 +23,9 @@ freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_w4scl")
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_pucnc")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, -65529, 0, 0, -65530, 0, 0, -65531, 0, 0, -65532, 0, 0, -65533, 0, 0, -65534, 0, 0, -65535, 0, 0, -65536, 0, 0, -1, 0, 0, -2, 0, 0, -3, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 65531, 0, 0, -6, 0, 0, -7, 0, 0, -8, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, -4, 0, 0, -5, 0, 0)

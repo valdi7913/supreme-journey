@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pgd5w8x41car"
-path="res://.godot/imported/ShinyTile.png-574816136d0adecb8e5ae3cc6b999ce7.ctex"
+uid="uid://bfhykxineps1v"
+path="res://.godot/imported/Background.png-11bc84fe4d7686a716d11ebb080e2204.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/ShinyTile.png"
-dest_files=["res://.godot/imported/ShinyTile.png-574816136d0adecb8e5ae3cc6b999ce7.ctex"]
+source_file="res://Assets/Sprites/Background.png"
+dest_files=["res://.godot/imported/Background.png-11bc84fe4d7686a716d11ebb080e2204.ctex"]
 
 [params]
 
