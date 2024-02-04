@@ -18,7 +18,6 @@ metadata/_edit_group_ = true
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_g8syl")]
 position = Vector2(566, 498)
-MAX_JUMP_FORCE = 1000.0
 
 [node name="RigidBody2D" parent="." instance=ExtResource("3_nilva")]
 position = Vector2(574, 641)
