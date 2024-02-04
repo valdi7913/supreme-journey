@@ -1,6 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4axhrn2egskx"]
+[gd_scene load_steps=4 format=3 uid="uid://b4axhrn2egskx"]
 
 [ext_resource type="Script" path="res://Scrips/Main.gd" id="1_tk2wc"]
+[ext_resource type="PackedScene" uid="uid://f8j2dxiy74fd" path="res://Scrips/player.tscn" id="2_g8syl"]
+[ext_resource type="PackedScene" uid="uid://bebobeo562c82" path="res://Scrips/platform.tscn" id="3_nilva"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_tk2wc")
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_g8syl")]
+position = Vector2(396, 210)
+jump_force = 30000.0
+
+[node name="RigidBody2D" parent="." instance=ExtResource("3_nilva")]
+position = Vector2(574, 641)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("3_nilva")]
+position = Vector2(569, 7)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("3_nilva")]
+position = Vector2(9, 353)
+rotation = 1.5708
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("3_nilva")]
+position = Vector2(1141, 297)
+rotation = 1.5708

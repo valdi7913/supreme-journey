@@ -26,10 +26,10 @@ size = Vector2(16, 29)
 [node name="RigidBody2D" type="RigidBody2D"]
 disable_mode = 2
 physics_material_override = SubResource("PhysicsMaterial_p8f4r")
-lock_rotation = true
 max_contacts_reported = 10
 contact_monitor = true
 script = ExtResource("1_m6220")
+jump_force = 5000
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)

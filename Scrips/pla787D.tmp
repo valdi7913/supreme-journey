@@ -1,10 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://f8j2dxiy74fd"]
+[gd_scene load_steps=6 format=3 uid="uid://f8j2dxiy74fd"]
 
 [ext_resource type="Texture2D" uid="uid://bj8583as8gjmh" path="res://Assets/Sprites/BillDefault_1.png" id="1_ejrk2"]
 [ext_resource type="Script" path="res://Scrips/player.gd" id="1_m6220"]
 [ext_resource type="Texture2D" uid="uid://b64vd1w4d6qsj" path="res://Assets/Sprites/BillDefault_2.png" id="2_2samc"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p8f4r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_46rgj"]
 animations = [{
@@ -25,8 +23,6 @@ size = Vector2(16, 29)
 
 [node name="RigidBody2D" type="RigidBody2D"]
 disable_mode = 2
-physics_material_override = SubResource("PhysicsMaterial_p8f4r")
-lock_rotation = true
 max_contacts_reported = 10
 contact_monitor = true
 script = ExtResource("1_m6220")
