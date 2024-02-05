@@ -1,0 +1,78 @@
+[gd_scene load_steps=17 format=3 uid="uid://bybo16oivr0n7"]
+
+[ext_resource type="Texture2D" uid="uid://cu8o33dn0whyt" path="res://Assets/Sprites/JumpChargeBar1.png" id="1_6lxu6"]
+[ext_resource type="Texture2D" uid="uid://hos7pjwkr3t" path="res://Assets/Sprites/JumpChargeBar2.png" id="2_vqny0"]
+[ext_resource type="Texture2D" uid="uid://dy2o5ooettwe6" path="res://Assets/Sprites/JumpChargeBar3.png" id="3_lvc4w"]
+[ext_resource type="Texture2D" uid="uid://b72o1mh5wsbtj" path="res://Assets/Sprites/JumpChargeBar4.png" id="4_e6bpe"]
+[ext_resource type="Texture2D" uid="uid://botdxjawphbi7" path="res://Assets/Sprites/JumpChargeBar5.png" id="5_0fqsl"]
+[ext_resource type="Texture2D" uid="uid://dv7827p6wnb75" path="res://Assets/Sprites/JumpChargeBar6.png" id="6_qhhtw"]
+[ext_resource type="Texture2D" uid="uid://b6qxmji5su6kv" path="res://Assets/Sprites/JumpChargeBar7.png" id="7_bs5cf"]
+[ext_resource type="Texture2D" uid="uid://bbpf6drp3smeo" path="res://Assets/Sprites/JumpChargeBar8.png" id="8_b7ywt"]
+[ext_resource type="Texture2D" uid="uid://caqpp46wqf7lq" path="res://Assets/Sprites/JumpChargeBar9.png" id="9_olrbh"]
+[ext_resource type="Texture2D" uid="uid://bgemvp82bkd5c" path="res://Assets/Sprites/JumpChargeBar10.png" id="10_avtkh"]
+[ext_resource type="Texture2D" uid="uid://beqyercli7jr0" path="res://Assets/Sprites/JumpChargeBar11.png" id="11_oh1sd"]
+[ext_resource type="Texture2D" uid="uid://c2c64kfwq2iki" path="res://Assets/Sprites/JumpChargeBar12.png" id="12_1uh7t"]
+[ext_resource type="Texture2D" uid="uid://lg3jsmwh04vo" path="res://Assets/Sprites/JumpChargeBar13.png" id="13_yl7xm"]
+[ext_resource type="Texture2D" uid="uid://c6sbtplgl08rl" path="res://Assets/Sprites/JumpChargeBar14.png" id="14_rkt6p"]
+[ext_resource type="Texture2D" uid="uid://c0dch0lshx05o" path="res://Assets/Sprites/JumpChargeBar15.png" id="15_v1uqm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_muh34"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6lxu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vqny0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lvc4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e6bpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0fqsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qhhtw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bs5cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b7ywt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_olrbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_avtkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_oh1sd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1uh7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yl7xm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rkt6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v1uqm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.5
+}]
+
+[node name="JumpChargeBar" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, 0)
+sprite_frames = SubResource("SpriteFrames_muh34")
+frame = 13
+frame_progress = 0.564272

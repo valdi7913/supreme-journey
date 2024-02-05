@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b6j0qbrlnngy"]
+[gd_scene load_steps=32 format=3 uid="uid://f8j2dxiy74fd"]
 
 [ext_resource type="Texture2D" uid="uid://bj8583as8gjmh" path="res://Assets/Sprites/BillDefault_1.png" id="1_ejrk2"]
 [ext_resource type="Script" path="res://Scrips/player.gd" id="1_m6220"]
@@ -25,7 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://byc7t8fhwmv3v" path="res://Assets/Sprites/BillWalk_6.png" id="15_3ejl3"]
 [ext_resource type="Texture2D" uid="uid://cvs66d4tf1dis" path="res://Assets/Sprites/BillWalk_7.png" id="16_ve5wm"]
 [ext_resource type="Texture2D" uid="uid://dp8q10weqnies" path="res://Assets/Sprites/BillWalk_8.png" id="17_t4hgm"]
-[ext_resource type="PackedScene" uid="uid://bybo16oivr0n7" path="res://Scrips/jump_charge_bar.tscn" id="26_lynig"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p8f4r"]
 bounce = 0.35
@@ -138,12 +137,15 @@ physics_material_override = SubResource("PhysicsMaterial_p8f4r")
 max_contacts_reported = 10
 contact_monitor = true
 script = ExtResource("1_m6220")
+MAX_JUMP_FORCE = null
+MAX_JUMP_CHARGE_TIME = null
+angle_diff = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_46rgj")
 animation = &"default_left"
-frame_progress = 0.240532
+frame_progress = 0.134496
 
 [node name="TummyCollider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 21.5)
@@ -165,9 +167,5 @@ shape = SubResource("RectangleShape2D_th2b3")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="JumpTimer" type="Timer" parent="."]
-
-[node name="JumpChargeBar" parent="." instance=ExtResource("26_lynig")]
-position = Vector2(-37, -51)
-scale = Vector2(3, 3)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
