@@ -1,21 +1,21 @@
-[gd_scene load_steps=24 format=3 uid="uid://b6j0qbrlnngy"]
+[gd_scene load_steps=33 format=3 uid="uid://b6j0qbrlnngy"]
 
 [ext_resource type="Texture2D" uid="uid://bj8583as8gjmh" path="res://Assets/Sprites/BillDefault_1.png" id="1_ejrk2"]
-[ext_resource type="Script" path="res://Scrips/player.gd" id="1_m6220"]
+[ext_resource type="Script" path="res://Scrips/Player/player.gd" id="1_m6220"]
 [ext_resource type="Texture2D" uid="uid://b64vd1w4d6qsj" path="res://Assets/Sprites/BillDefault_2.png" id="2_2samc"]
-[ext_resource type="Texture2D" uid="uid://0oq7ri1o8rgs" path="res://Assets/Sprites/BillDefaultLeft_1.png" id="2_y6mof"]
-[ext_resource type="Texture2D" uid="uid://bun8revikthgr" path="res://Assets/Sprites/BillDefaultLeft_2.png" id="3_wn6kf"]
+[ext_resource type="Texture2D" uid="uid://semahp5o51xe" path="res://Assets/Sprites/BillDefaultLeft_1.png" id="2_y6mof"]
+[ext_resource type="Texture2D" uid="uid://bac3jxwlyhj8a" path="res://Assets/Sprites/BillDefaultLeft_2.png" id="3_wn6kf"]
 [ext_resource type="Texture2D" uid="uid://dpi6gc0byhk2o" path="res://Assets/Sprites/BillDefault_3.png" id="4_vkp5k"]
-[ext_resource type="Texture2D" uid="uid://ckohi3m0shkj6" path="res://Assets/Sprites/BillDefaultLeft_3.png" id="4_wcy35"]
+[ext_resource type="Texture2D" uid="uid://b6h2qat0mrxv6" path="res://Assets/Sprites/BillDefaultLeft_3.png" id="4_wcy35"]
 [ext_resource type="Texture2D" uid="uid://ch4gkue1sec22" path="res://Assets/Sprites/BillDefault_4.png" id="5_5b0gy"]
-[ext_resource type="Texture2D" uid="uid://bw75m5vr8w8ip" path="res://Assets/Sprites/BillDefaultLeft_4.png" id="5_uub07"]
-[ext_resource type="Texture2D" uid="uid://dqpep8sag1nmu" path="res://Assets/Sprites/BillDefaultLeft_5.png" id="6_3fp6c"]
+[ext_resource type="Texture2D" uid="uid://d4cisfmltqpdr" path="res://Assets/Sprites/BillDefaultLeft_4.png" id="5_uub07"]
+[ext_resource type="Texture2D" uid="uid://dsq5k7ht8hccd" path="res://Assets/Sprites/BillDefaultLeft_5.png" id="6_3fp6c"]
 [ext_resource type="Texture2D" uid="uid://rodesphcqc18" path="res://Assets/Sprites/BillDefault_5.png" id="6_p5vo8"]
 [ext_resource type="Texture2D" uid="uid://drorfs40yipia" path="res://Assets/Sprites/BillDefault_6.png" id="7_2lcsu"]
-[ext_resource type="Texture2D" uid="uid://2sbv65gcu2qe" path="res://Assets/Sprites/BillDefaultLeft_6.png" id="7_xm0mp"]
+[ext_resource type="Texture2D" uid="uid://b2gn65ee6vxyt" path="res://Assets/Sprites/BillDefaultLeft_6.png" id="7_xm0mp"]
 [ext_resource type="Texture2D" uid="uid://dr53j2gvfqunl" path="res://Assets/Sprites/BillDefault_7.png" id="8_5my4b"]
-[ext_resource type="Texture2D" uid="uid://c4ymetckvmypb" path="res://Assets/Sprites/BillDefaultLeft_7.png" id="8_43fkn"]
-[ext_resource type="Texture2D" uid="uid://xskrw7oenimk" path="res://Assets/Sprites/BillDefaultLeft_8.png" id="9_0xyeh"]
+[ext_resource type="Texture2D" uid="uid://bul3amav0ebc4" path="res://Assets/Sprites/BillDefaultLeft_7.png" id="8_43fkn"]
+[ext_resource type="Texture2D" uid="uid://chky0my6o7u6s" path="res://Assets/Sprites/BillDefaultLeft_8.png" id="9_0xyeh"]
 [ext_resource type="Texture2D" uid="uid://pn3o3v0j8fdh" path="res://Assets/Sprites/BillDefault_8.png" id="9_tx2lf"]
 [ext_resource type="Texture2D" uid="uid://x4akcwlg30mx" path="res://Assets/Sprites/BillWalk_1.png" id="10_54ulm"]
 [ext_resource type="Texture2D" uid="uid://bdfg30kc4bhvq" path="res://Assets/Sprites/BillWalk_2.png" id="11_iqpg4"]
@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://byc7t8fhwmv3v" path="res://Assets/Sprites/BillWalk_6.png" id="15_3ejl3"]
 [ext_resource type="Texture2D" uid="uid://cvs66d4tf1dis" path="res://Assets/Sprites/BillWalk_7.png" id="16_ve5wm"]
 [ext_resource type="Texture2D" uid="uid://dp8q10weqnies" path="res://Assets/Sprites/BillWalk_8.png" id="17_t4hgm"]
-[ext_resource type="PackedScene" uid="uid://bybo16oivr0n7" path="res://Scrips/jump_charge_bar.tscn" id="26_lynig"]
+[ext_resource type="PackedScene" uid="uid://bybo16oivr0n7" path="res://Scrips/UI/jump_charge_bar.tscn" id="26_nhd0p"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p8f4r"]
 bounce = 0.35
@@ -135,6 +135,7 @@ size = Vector2(12, 24)
 [node name="RigidBody2D" type="RigidBody2D"]
 disable_mode = 2
 physics_material_override = SubResource("PhysicsMaterial_p8f4r")
+lock_rotation = true
 max_contacts_reported = 10
 contact_monitor = true
 script = ExtResource("1_m6220")
@@ -162,11 +163,9 @@ shape = SubResource("RectangleShape2D_6b2g5")
 position = Vector2(14, 56)
 shape = SubResource("RectangleShape2D_th2b3")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="JumpTimer" type="Timer" parent="."]
 
-[node name="JumpChargeBar" parent="." instance=ExtResource("26_lynig")]
+[node name="JumpChargeBar" parent="." instance=ExtResource("26_nhd0p")]
 position = Vector2(-37, -51)
 scale = Vector2(3, 3)
 

@@ -7,6 +7,8 @@ var jump_angle : float = 180
 @export var angle_diff : float = 30
 var is_airborne : bool = true 
 
+var mouse_position = null
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite2D.play("default")
@@ -30,7 +32,6 @@ func _handle_input():
 		$JumpChargeBar/AnimatedSprite2D.play()
 		$JumpTimer.stop()
 		$JumpTimer.start(MAX_JUMP_CHARGE_TIME)
-		print("Time to max jump ", MAX_JUMP_CHARGE_TIME)	
 	if Input.is_action_just_released("jump") and !is_airborne:
 		jump()
 
@@ -42,16 +43,14 @@ func _handle_animation():
 		$AnimatedSprite2D.play("default_right")
 
 func jump():
-	print("Time left", $JumpTimer.time_left)
+	mouse_position = get_global_mouse_position()
 	$JumpChargeBar/AnimatedSprite2D.stop()
 	var jump_power = (MAX_JUMP_CHARGE_TIME - $JumpTimer.time_left)/ MAX_JUMP_CHARGE_TIME
-	jump_power = clamp(jump_power, 0, 1)
-	print("jump power ", jump_power * 100, " %")
-	var jump_direction = Vector2(0,-1).normalized() * jump_power * 100000
+	jump_power = clamp(jump_power, 0, 1) * 100000
+	var jump_direction = (mouse_position - position).normalized() * jump_power 
 	if Input.is_action_pressed("move_left"):
 		jump_direction = jump_direction.rotated(deg_to_rad(-angle_diff))
 	if Input.is_action_pressed("move_right"):
 		jump_direction = jump_direction.rotated(deg_to_rad(angle_diff))	
-	print(jump_direction)
 	apply_force(jump_direction,center_of_mass)
 	#is_airborne = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bybo16oivr0n7"]
+[gd_scene load_steps=18 format=3 uid="uid://bybo16oivr0n7"]
 
 [ext_resource type="Texture2D" uid="uid://cu8o33dn0whyt" path="res://Assets/Sprites/JumpChargeBar1.png" id="1_6lxu6"]
 [ext_resource type="Texture2D" uid="uid://hos7pjwkr3t" path="res://Assets/Sprites/JumpChargeBar2.png" id="2_vqny0"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://lg3jsmwh04vo" path="res://Assets/Sprites/JumpChargeBar13.png" id="13_yl7xm"]
 [ext_resource type="Texture2D" uid="uid://c6sbtplgl08rl" path="res://Assets/Sprites/JumpChargeBar14.png" id="14_rkt6p"]
 [ext_resource type="Texture2D" uid="uid://c0dch0lshx05o" path="res://Assets/Sprites/JumpChargeBar15.png" id="15_v1uqm"]
+[ext_resource type="Script" path="res://Scrips/ChargeBar.gd" id="16_8la0p"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_muh34"]
 animations = [{
@@ -70,6 +71,7 @@ animations = [{
 }]
 
 [node name="JumpChargeBar" type="Node2D"]
+script = ExtResource("16_8la0p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(4, 0)
