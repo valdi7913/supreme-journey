@@ -16,10 +16,10 @@ script = ExtResource("1_tk2wc")
 [node name="World" type="Node2D" parent="."]
 
 [node name="RigidBody2D5" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(2914, 195)
+position = Vector2(1920, 70)
 
 [node name="RigidBody2D6" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(2305, -187)
+position = Vector2(-5070, 1605)
 rotation = -0.760964
 
 [node name="RigidBody2D6" parent="World/RigidBody2D6" instance=ExtResource("3_nilva")]
@@ -27,7 +27,7 @@ position = Vector2(931.741, -367.942)
 rotation = -0.760964
 
 [node name="RigidBody2D7" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(2402, 817)
+position = Vector2(2702, 1201)
 
 [node name="RigidBody2D8" parent="World" instance=ExtResource("3_nilva")]
 position = Vector2(-1463, 508)
@@ -54,10 +54,10 @@ position = Vector2(-1024.1, -129.718)
 rotation = 0.253073
 
 [node name="RigidBody2D9" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(-45, -766)
+position = Vector2(-473, 20)
 
 [node name="RigidBody2D10" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(-789, -211)
+position = Vector2(-486, 441)
 
 [node name="RigidBody2D11" parent="World" instance=ExtResource("3_nilva")]
 position = Vector2(902, -1263)
@@ -89,21 +89,19 @@ metadata/_edit_group_ = true
 position = Vector2(634, 811)
 
 [node name="RigidBody2D2" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(569, 7)
+position = Vector2(650, 237)
 
 [node name="RigidBody2D3" parent="World" instance=ExtResource("3_nilva")]
 position = Vector2(-387, 812)
 mass = 33.65
 
 [node name="RigidBody2D4" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(1477, 416)
-rotation = -0.47822
-scale = Vector2(1, 1)
+position = Vector2(1662, 564)
 
 [node name="Background" type="Sprite2D" parent="World"]
 show_behind_parent = true
 clip_children = 2
-position = Vector2(5075, -2734)
+position = Vector2(585, -1035)
 scale = Vector2(7.93813, 8.06924)
 texture = ExtResource("4_of7q2")
 flip_h = true
@@ -116,5 +114,5 @@ MAX_JUMP_FORCE = 1000.0
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(566, 498)
 scale = Vector2(0.5, 0.5)
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.8, 0.8)
 script = ExtResource("5_y3jw0")
