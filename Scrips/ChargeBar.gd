@@ -1,14 +1,13 @@
 extends Node2D
 
-
+var NUM_FRAMES;
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var sprite_frames = $AnimatedSprite2D.sprite_frames;
+	var current_animation = $AnimatedSprite2D.animation;
+	NUM_FRAMES = sprite_frames.get_frame_count(current_animation)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):	
-	if $AnimatedSprite2D.is_playing() and $AnimatedSprite2D.get_frame_progress() > 0.9:
-		$AnimatedSprite2D.stop()
-	else:
-		$AnimatedSprite2D.play()
+func set_charge_progress(progress: float):
+	var index = int(progress * NUM_FRAMES) 
+	index = min(NUM_FRAMES - 1, index)
+	$AnimatedSprite2D.set_frame(index)
