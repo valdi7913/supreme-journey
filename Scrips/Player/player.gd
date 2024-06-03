@@ -1,7 +1,7 @@
 extends RigidBody2D
 
-@export var MAX_JUMP_FORCE : float = 20000
-@export var MAX_JUMP_CHARGE_TIME : float = 2
+@export var MAX_JUMP_FORCE : float = 30000
+@export var MAX_JUMP_CHARGE_TIME : float = 1.5
 var EPSILON : float = 40
 var is_airborne : bool = true 
 var speed: float = 10
@@ -13,6 +13,8 @@ func _ready():
 	$AnimatedSprite2D.play("default")
 
 func _process(delta):
+	if position.y < -1000:
+		position = Vector2(960, 400)
 	_handle_input(delta)
 	_handle_animation()
 
@@ -24,7 +26,7 @@ func deg_to_rad(deg : float):
 
 func _handle_input(delta):
 	if Input.is_action_just_pressed("reset"):
-		position = Vector2(400,400)
+		position = Vector2(960, 400)
 		rotation = 0
 	if Input.is_action_just_pressed("jump") and !is_airborne:
 		print("Charging")
@@ -46,11 +48,13 @@ func _handle_animation():
 		$AnimatedSprite2D.play("default_right")
 	
 	if jump_charge_start != 0:
+		$JumpChargeBar.visible=true
 		var elapsed_time_in_seconds = (Time.get_ticks_msec() - jump_charge_start)/1000.0
 		var ratio_of_max_charge_time = (elapsed_time_in_seconds/MAX_JUMP_CHARGE_TIME)
 		$JumpChargeBar.set_charge_progress(ratio_of_max_charge_time)
 	else:
 		$JumpChargeBar.set_charge_progress(0)
+		$JumpChargeBar.visible=false
 	#Jump charge bar
 
 func jump(charge_time):

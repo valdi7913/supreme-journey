@@ -1,10 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4axhrn2egskx"]
+[gd_scene load_steps=11 format=3 uid="uid://b4axhrn2egskx"]
 
 [ext_resource type="Script" path="res://Scrips/Main.gd" id="1_tk2wc"]
 [ext_resource type="PackedScene" uid="uid://b6j0qbrlnngy" path="res://Scrips/Player/player.tscn" id="2_g8syl"]
+[ext_resource type="Texture2D" uid="uid://dwyk0bh40nvfo" path="res://Assets/Sprites/Background4px.png" id="2_xg2kr"]
 [ext_resource type="PackedScene" uid="uid://bebobeo562c82" path="res://Scrips/platform.tscn" id="3_nilva"]
-[ext_resource type="Texture2D" uid="uid://bfhykxineps1v" path="res://Assets/Sprites/Background.png" id="4_of7q2"]
+[ext_resource type="PackedScene" uid="uid://cxej5to1wuh0d" path="res://Scrips/Wall.tscn" id="4_nia6d"]
 [ext_resource type="Script" path="res://Scrips/Camera2D.gd" id="5_y3jw0"]
+[ext_resource type="FontFile" uid="uid://gfcx7ympuwt3" path="res://Assets/Font/medieval-pixel.ttf" id="7_h3nmd"]
+
+[sub_resource type="Theme" id="Theme_ckmgi"]
+default_base_scale = 1.0
+default_font = ExtResource("7_h3nmd")
+default_font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_m8k34"]
+font_size = 200
+font_color = Color(0.027451, 0.133333, 0.152941, 1)
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_svy2g"]
+font_size = 80
+font_color = Color(0.027451, 0.133333, 0.152941, 1)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_tk2wc")
@@ -15,104 +32,72 @@ script = ExtResource("1_tk2wc")
 
 [node name="World" type="Node2D" parent="."]
 
-[node name="RigidBody2D5" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(1920, 70)
-
-[node name="RigidBody2D6" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(-5070, 1605)
-rotation = -0.760964
-
-[node name="RigidBody2D6" parent="World/RigidBody2D6" instance=ExtResource("3_nilva")]
-position = Vector2(931.741, -367.942)
-rotation = -0.760964
-
-[node name="RigidBody2D7" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(2702, 1201)
-
-[node name="RigidBody2D8" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(-1463, 508)
-rotation = 0.253073
-
-[node name="RigidBody2D8" parent="World/RigidBody2D8" instance=ExtResource("3_nilva")]
-position = Vector2(-1024.1, -129.718)
-rotation = 0.253073
-
-[node name="RigidBody2D8" parent="World/RigidBody2D8/RigidBody2D8" instance=ExtResource("3_nilva")]
-position = Vector2(-1024.1, -129.718)
-rotation = 0.253073
-
-[node name="RigidBody2D8" parent="World/RigidBody2D8/RigidBody2D8/RigidBody2D8" instance=ExtResource("3_nilva")]
-position = Vector2(-1024.1, -129.718)
-rotation = 0.253073
-
-[node name="RigidBody2D8" parent="World/RigidBody2D8/RigidBody2D8/RigidBody2D8/RigidBody2D8" instance=ExtResource("3_nilva")]
-position = Vector2(-1024.1, -129.718)
-rotation = 0.253073
-
-[node name="RigidBody2D8" parent="World/RigidBody2D8/RigidBody2D8/RigidBody2D8/RigidBody2D8/RigidBody2D8" instance=ExtResource("3_nilva")]
-position = Vector2(-1024.1, -129.718)
-rotation = 0.253073
-
-[node name="RigidBody2D9" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(-473, 20)
-
-[node name="RigidBody2D10" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(-486, 441)
-
-[node name="RigidBody2D11" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(902, -1263)
-
-[node name="RigidBody2D12" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(-693, -1992)
-
-[node name="RigidBody2D12" parent="World/RigidBody2D12" instance=ExtResource("3_nilva")]
-position = Vector2(4034, 447)
-
-[node name="RigidBody2D12" parent="World/RigidBody2D12/RigidBody2D12" instance=ExtResource("3_nilva")]
-position = Vector2(1031, 4)
-
-[node name="RigidBody2D12" parent="World/RigidBody2D12/RigidBody2D12/RigidBody2D12" instance=ExtResource("3_nilva")]
-position = Vector2(-612, -520)
-
-[node name="RigidBody2D12" parent="World/RigidBody2D12/RigidBody2D12/RigidBody2D12/RigidBody2D12" instance=ExtResource("3_nilva")]
-position = Vector2(-2185, 165)
-
-[node name="Background2" type="Sprite2D" parent="World"]
-show_behind_parent = true
-clip_children = 2
-position = Vector2(-30, -1131)
-texture = ExtResource("4_of7q2")
-flip_h = true
-metadata/_edit_group_ = true
+[node name="Background4Px" type="Sprite2D" parent="World"]
+position = Vector2(952, 476)
+scale = Vector2(1.8, 1.26933)
+texture = ExtResource("2_xg2kr")
 
 [node name="RigidBody2D" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(634, 811)
+position = Vector2(960, 988)
 
 [node name="RigidBody2D2" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(650, 237)
+position = Vector2(2880, 988)
 
 [node name="RigidBody2D3" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(-387, 812)
+position = Vector2(-960, 988)
 mass = 33.65
 
 [node name="RigidBody2D4" parent="World" instance=ExtResource("3_nilva")]
-position = Vector2(1662, 564)
+position = Vector2(3128, 504)
 
-[node name="Background" type="Sprite2D" parent="World"]
-show_behind_parent = true
-clip_children = 2
-position = Vector2(585, -1035)
-scale = Vector2(7.93813, 8.06924)
-texture = ExtResource("4_of7q2")
-flip_h = true
-metadata/_edit_group_ = true
+[node name="RigidBody2D5" parent="World" instance=ExtResource("3_nilva")]
+position = Vector2(2880, -132)
+
+[node name="RigidBody2D5" parent="World/RigidBody2D5" instance=ExtResource("3_nilva")]
+position = Vector2(1924, 0)
+
+[node name="Wall" parent="World" instance=ExtResource("4_nia6d")]
+position = Vector2(-280, 1112)
+freeze = true
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_g8syl")]
-position = Vector2(566, 498)
-MAX_JUMP_FORCE = 1000.0
+position = Vector2(748, 34)
+MAX_JUMP_FORCE = 1094.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(566, 498)
-scale = Vector2(0.5, 0.5)
-zoom = Vector2(0.8, 0.8)
+position = Vector2(960, 540)
 script = ExtResource("5_y3jw0")
+
+[node name="UI" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="UI"]
+offset_top = 100.0
+offset_right = 1920.0
+offset_bottom = 251.0
+theme = SubResource("Theme_ckmgi")
+theme_override_fonts/font = ExtResource("7_h3nmd")
+text = "Supreme Journey"
+label_settings = SubResource("LabelSettings_m8k34")
+horizontal_alignment = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UI/Label"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UI/Label/StaticBody2D"]
+position = Vector2(271, 0)
+polygon = PackedVector2Array(-1, 0, 88, 0, 88, 38, 201, 38, 201, 25, 251, 25, 251, 38, 289, 39, 289, 25, 352, 25, 352, 38, 414, 38, 414, 25, 427, 25, 427, 38, 464, 38, 464, 25, 477, 25, 477, 38, 514, 38, 514, 25, 527, 25, 527, 38, 564, 38, 564, 25, 577, 25, 577, 25, 577, 38, 589, 38, 589, 50, 627, 50, 627, 38, 639, 38, 639, 25, 652, 25, 652, 38, 664, 38, 664, 50, 677, 50, 677, 113, 652, 113, 652, 126, 627, 126, 627, 113, 477, 113, 477, 126, 464, 126, 464, 113, 427, 113, 427, 126, 402, 126, 402, 113, 389, 113, 389, 63, 364, 63, 364, 76, 339, 76, 339, 126, 302, 126, 289, 126, 289, 88, 264, 88, 264, 113, 239, 113, 239, 138, 226, 138, 226, 151, 213, 151, 213, 126, 176, 126, 176, 113, 139, 113, 139, 126, 126, 126, 126, 113, -12, 113, -12, 12, -1, 12)
+one_way_collision = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="UI/Label/StaticBody2D"]
+scale = Vector2(1.33399, -27130.7)
+build_mode = 1
+
+[node name="Label2" type="Label" parent="UI"]
+offset_left = 496.0
+offset_top = 304.0
+offset_right = 1426.0
+offset_bottom = 364.0
+theme = SubResource("Theme_ckmgi")
+theme_override_fonts/font = ExtResource("7_h3nmd")
+text = "Press and hold space to jump"
+label_settings = SubResource("LabelSettings_svy2g")
+horizontal_alignment = 1
