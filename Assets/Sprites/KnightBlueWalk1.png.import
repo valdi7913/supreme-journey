@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3bgmvifmhoa7"
-path="res://.godot/imported/spriteSheetKnightBlue.png-aadf2c0e10b9d5d1cec7e765ae4f06eb.ctex"
+uid="uid://d4kq3eki1m85"
+path="res://.godot/imported/KnightBlueWalk1.png-e8d7eda5751f9293ff307e407650af92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/spriteSheetKnightBlue.png"
-dest_files=["res://.godot/imported/spriteSheetKnightBlue.png-aadf2c0e10b9d5d1cec7e765ae4f06eb.ctex"]
+source_file="res://Assets/Sprites/KnightBlueWalk1.png"
+dest_files=["res://.godot/imported/KnightBlueWalk1.png-e8d7eda5751f9293ff307e407650af92.ctex"]
 
 [params]
 

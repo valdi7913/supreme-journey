@@ -86,17 +86,17 @@ disable_mode = 2
 script = ExtResource("1_m6220")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -106)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_46rgj")
+animation = &"walking"
+frame_progress = 0.242673
 
 [node name="JumpChargeBar" parent="." instance=ExtResource("26_nhd0p")]
-visible = false
-position = Vector2(78, -153)
+position = Vector2(91, -47)
 scale = Vector2(2, 2)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
-position = Vector2(-2, -122)
+position = Vector2(0, -18)
 scale = Vector2(2, 2)
 polygon = PackedVector2Array(-11, -31, 9, -31, 9, -17, 17, -17, 17, 61, -21, 61, -21, -17, -11, -17)

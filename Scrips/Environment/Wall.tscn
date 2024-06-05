@@ -59,7 +59,7 @@ texture = ExtResource("1_38vy3")
 [sub_resource type="TileSet" id="TileSet_hcw2u"]
 sources/0 = SubResource("TileSetAtlasSource_7eg28")
 
-[node name="Wall" type="RigidBody2D"]
+[node name="Wall" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -240)

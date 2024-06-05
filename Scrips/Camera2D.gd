@@ -1,6 +1,6 @@
 extends Camera2D
 
-var player_node: RigidBody2D
+var player_node: CharacterBody2D
 
 var translateWaitTimer: float = 0
 var waitTime: float = 0.1

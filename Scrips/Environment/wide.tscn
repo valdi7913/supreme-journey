@@ -68,12 +68,11 @@ margins = Vector2i(0, 8)
 [sub_resource type="TileSet" id="TileSet_pucnc"]
 sources/0 = SubResource("TileSetAtlasSource_jr5k7")
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[node name="Wide Grass" type="StaticBody2D"]
 texture_filter = 1
 disable_mode = 1
 collision_layer = 129
 physics_material_override = SubResource("PhysicsMaterial_islry")
-freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 32)

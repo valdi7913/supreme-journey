@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://cj0a0mbdisssa"]
+
+[ext_resource type="Texture2D" uid="uid://c1tyl6f8c0al8" path="res://Assets/Sprites/dirtChunk.png" id="1_grmkt"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_islry"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4scl"]
+size = Vector2(1024, 128)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jr5k7"]
+texture = ExtResource("1_grmkt")
+margins = Vector2i(0, 8)
+0:1/0 = 0
+1:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+0:0/next_alternative_id = 7
+0:0/0 = 0
+0:0/2 = 2
+0:0/3 = 3
+0:0/4 = 4
+0:0/6 = 6
+0:0/5 = 5
+1:0/0 = 0
+2:1/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pucnc"]
+sources/0 = SubResource("TileSetAtlasSource_jr5k7")
+
+[node name="Thin Grass" type="StaticBody2D"]
+texture_filter = 1
+disable_mode = 1
+collision_layer = 129
+physics_material_override = SubResource("PhysicsMaterial_islry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w4scl")
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_pucnc")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 131072, 1, 1, 196608, 1, 2, 262144, 1, 3, 327680, 1, 4, 0, 1, 5, 65536, 1, 6, 131072, 1, 7, 196608, 1, -65529, 196608, 0, -65530, 131072, 0, -65531, 65536, 0, -65532, 0, 0, -65533, 327680, 0, -65534, 262144, 0, -65535, 196608, 0, -65536, 131072, 0, -1, 65536, 0, -2, 0, 0, -3, 327680, 0, 65535, 65536, 1, 65534, 0, 1, 65533, 327680, 1, 65532, 262144, 1, 65531, 196608, 1, -6, 131072, 0, -7, 65536, 0, -8, 0, 0, 65528, 0, 1, 65529, 65536, 1, 65530, 131072, 1, -4, 262144, 0, -5, 196608, 0)
